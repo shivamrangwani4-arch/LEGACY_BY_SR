@@ -5,7 +5,6 @@ const CATEGORY_NAMES = {
   'motorsport': 'Motorsport Streetwear Racing Collection',
   'resort-shirts': 'Monochrome & Resort Vacation Shirts',
   'knit-polos': 'Textured Cable-Knit & Ribbed Polos',
-  'graphic-tees': 'Brutalist Graphic Tees (EST. 2026)',
   'gurkha-pants': 'Double-Buckle Gurkha Trousers Collection',
   'airflex-pants': 'Airflex 4-Way Stretch Pants',
   'wideleg-pants': 'Minimalist Double-Pleated Wide-Leg Trousers',
@@ -69,14 +68,6 @@ const HERO_SLIDES = [
     image: "./images/hero_slide_3.jpg",
     gender: "all",
     category: "gurkha-pants"
-  },
-  {
-    title: "AMBASSADOR CAMPAIGN // SS26",
-    subtitle: "Farhan Saeed & Dur-e-Fishan for LEGACY",
-    cta: "Shop Ambassador Drop",
-    image: "./images/farhan_legacy_tee.jpg",
-    gender: "all",
-    category: "graphic-tees"
   }
 ];
 

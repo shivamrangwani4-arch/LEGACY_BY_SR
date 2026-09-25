@@ -1,5 +1,6 @@
-// LEGACY (EST. 2026) - Comprehensive Product Catalog
-// User-Configured Starting 4: Selvedge Denim, Cable-Knit Polo, Pleated Wide-Leg Pants, Motorsport Racing Jersey. All remaining items placed below.
+// LEGACY (EST. 2026) - Curated Luxury Streetwear & Atelier Product Catalog
+// Cleaned: Removed Farhan Saeed, Dur-e-Fishan, and Graphic Tees as requested.
+// Starting 4: Selvedge Denim, Cable-Knit Polo, Pleated Wide-Leg Pants, Motorsport Racing Jersey.
 
 const PRODUCTS_DATA = [
 {
@@ -106,84 +107,6 @@ const PRODUCTS_DATA = [
   },
 
 {
-    id: "leg-tee-farhan",
-    name: "Farhan Saeed × LEGACY Oversized Drop-Shoulder Tee (EST. 2026)",
-    brand: "LEGACY",
-    gender: "men",
-    category: "graphic-tees",
-    subCategory: "t-shirts",
-    price: 1990,
-    originalPrice: 2790,
-    tag: "AMBASSADOR DROP",
-    isAiGenerated: true,
-    badge: "Farhan Saeed Edition",
-    rating: 5.0,
-    reviews: 192,
-    image: "./images/farhan_legacy_tee.jpg",
-    secondaryImage: "./images/farhan_legacy_tee_detail.jpg",
-    colors: [
-      { name: "Asphalt Mineral Black", code: "#181818" },
-      { name: "Off White Vintage", code: "#f0ede6" },
-      { name: "Washed Charcoal", code: "#333333" }
-    ],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description: "Official campaign edition worn by celebrity ambassador Farhan Saeed. Heavyweight 280 GSM combed cotton with an architectural boxy drop-shoulder cut, pre-shrunk vintage mineral dye, and high-density screen-printed 'LEGACY EST. 2026' brutalist signature chest insignia.",
-    features: ["Celebrity Ambassador Campaign Piece (Farhan Saeed)", "280 GSM Heavyweight Combed Cotton", "Relaxed Boxy Drop-Shoulder Silhouette", "Pre-shrunk vintage wash & reinforced collar"]
-  },
-
-{
-    id: "leg-fem-durefishan",
-    name: "Dur-e-Fishan Saleem × LEGACY Golden Hour Silk Atelier Top",
-    brand: "LEGACY",
-    gender: "women",
-    category: "shirts",
-    subCategory: "shirts",
-    price: 2490,
-    originalPrice: 3490,
-    tag: "AMBASSADOR DROP",
-    isAiGenerated: true,
-    badge: "Dur-e-Fishan Edition",
-    rating: 5.0,
-    reviews: 218,
-    image: "./images/durefishan_legacy_top.jpg",
-    secondaryImage: "./images/durefishan_legacy_top_detail.jpg",
-    colors: [
-      { name: "Golden Hour Ochre", code: "#9e5c2b" },
-      { name: "Raw Ecru Silk", code: "#ece5d8" },
-      { name: "Obsidian Noir", code: "#121212" }
-    ],
-    sizes: ["XS", "S", "M", "L", "XL"],
-    description: "Official campaign edition worn by actress & style icon Dur-e-Fishan Saleem. Tailored from a fluid silk-modal blend in a radiant golden hour palette, featuring an elegant relaxed neckline, delicate French cuffs, and subtle debossed 'LEGACY ATELIER' gold hardware.",
-    features: ["Celebrity Ambassador Campaign Piece (Dur-e-Fishan Saleem)", "Fluid Silk-Modal Breathable Blend", "Contemporary Atelier Streetwear Cut", "Concealed mother-of-pearl buttons"]
-  },
-
-{
-    id: "leg-tee-01",
-    name: "LEGACY Oversized Graphic Tee (EST. 2026)",
-    brand: "LEGACY",
-    gender: "men",
-    category: "graphic-tees",
-    subCategory: "t-shirts",
-    price: 1890,
-    originalPrice: 2490,
-    tag: "SIGNATURE PIECE",
-    isAiGenerated: true,
-    badge: "Bestseller",
-    rating: 4.9,
-    reviews: 142,
-    image: "./images/legacy_graphic_tee.jpg",
-    secondaryImage: "./images/legacy_graphic_tee_detail.jpg",
-    colors: [
-      { name: "Washed Black", code: "#1a1a1a" },
-      { name: "Off White", code: "#f0ede6" },
-      { name: "Vintage Charcoal", code: "#383838" }
-    ],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description: "The quintessential LEGACY streetwear staple. Crafted from custom heavyweight 280 GSM combed cotton with a relaxed boxy drape, dropped shoulders, and high-density screen-printed 'LEGACY EST. 2026' brutalist branding.",
-    features: ["280 GSM 100% Combed Cotton", "Boxy Streetwear Fit", "Pre-shrunk vintage wash", "Reinforced ribbed collar"]
-  },
-
-{
     id: "leg-gurk-01",
     name: "Double-Buckle Gurkha Trousers // SMART FIT",
     brand: "LEGACY",
@@ -257,55 +180,6 @@ const PRODUCTS_DATA = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     description: "Official studio campaign lookbook edition. Technical aero-mesh button-up with bold high-contrast VIKINGS racing crest and drop-shoulder streetwear cut. Photographed in minimalist brutalist studio setting.",
     features: ["Aero-mesh breathable construction", "High-contrast Grand Prix graphics", "Relaxed camp collar silhouette", "Studio runway archive piece"]
-  },
-
-{
-    id: "leg-moto-03",
-    name: "LEGACY Trackside Motorsport Racing Graphic Tee (EST. 2026)",
-    brand: "LEGACY",
-    gender: "men",
-    category: "motorsport",
-    subCategory: "t-shirts",
-    price: 1990,
-    originalPrice: 2590,
-    tag: "STREET CULTURE",
-    badge: "Hot Drop",
-    rating: 4.8,
-    reviews: 112,
-    image: "./images/legacy_motorsport_tee.jpg",
-    secondaryImage: "./images/legacy_motorsport_tee_detail.jpg",
-    colors: [
-      { name: "Asphalt Charcoal", code: "#1a1a1a" },
-      { name: "Raw Ecru", code: "#ece8df" }
-    ],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description: "280 GSM heavyweight brutalist streetwear tee featuring the 'LEGACY MOTORSPORT RACING DIVISION // EST. 2026' chest archive print and relaxed drop-shoulder cut.",
-    features: ["Heavy 280 GSM combed cotton", "High-density chest racing typography", "Oversized boxy drop-shoulder silhouette", "Reinforced neck ribbing"]
-  },
-
-{
-    id: "leg-tee-02",
-    name: "LEGACY 2026 ARCHIVE Acid-Wash Streetwear Tee",
-    brand: "LEGACY",
-    gender: "men",
-    category: "graphic-tees",
-    subCategory: "t-shirts",
-    price: 1990,
-    originalPrice: 2690,
-    tag: "ARCHIVE COLLECTION",
-    isAiGenerated: true,
-    badge: "Trending",
-    rating: 4.9,
-    reviews: 142,
-    image: "./images/legacy_vintage_archive_tee.jpg",
-    secondaryImage: "./images/legacy_vintage_archive_tee_detail.jpg",
-    colors: [
-      { name: "Mineral Washed Grey", code: "#404040" },
-      { name: "Faded Onyx", code: "#1f1f1f" }
-    ],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description: "Heavyweight 280 GSM mineral-washed cotton with vintage distressed gothic 'LEGACY 2026 ARCHIVE' screen-printing. Dropped shoulders and raw hems create an authentic street aesthetic.",
-    features: ["280 GSM Mineral Acid-Washed Cotton", "Gothic Brutalist 'LEGACY 2026' Artwork", "Boxy Dropped-Shoulder Fit", "Pre-shrunk vintage wash"]
   },
 
 {
@@ -458,31 +332,6 @@ const PRODUCTS_DATA = [
     sizes: ["XS", "S", "M", "L"],
     description: "The headline piece of the FW26 Season Preview. A sculpted cropped denim jacket with military silver crest buttons, exposed contrast topstitching, and a sharp tailored collar.",
     features: ["Rigid 13.5oz Cotton Denim", "Cropped silhouette with clean boxy hem", "Functional silver-toned crest buttons", "Pairable with matching utility cargos"]
-  },
-
-{
-    id: "leg-tee-03",
-    name: "Women's LEGACY Oversized Graphic Street Tee (EST. 2026)",
-    brand: "LEGACY",
-    gender: "women",
-    category: "graphic-tees",
-    subCategory: "t-shirts",
-    price: 1890,
-    originalPrice: 2490,
-    tag: "SIGNATURE PIECE",
-    isAiGenerated: true,
-    badge: "Bestseller",
-    rating: 5.0,
-    reviews: 172,
-    image: "./images/legacy_women_graphic_tee.jpg",
-    secondaryImage: "./images/legacy_women_graphic_tee_detail.jpg",
-    colors: [
-      { name: "Vintage Washed Black", code: "#1d1d1f" },
-      { name: "Charcoal Grey", code: "#3a3a3c" }
-    ],
-    sizes: ["XS", "S", "M", "L", "XL"],
-    description: "The headline women's streetwear essential. Tailored in an oversized relaxed boxy cut from heavyweight 260 GSM combed cotton with high-density 'LEGACY EST. 2026' arch branding across the chest.",
-    features: ["260 GSM Heavyweight Organic Cotton", "Oversized Streetwear Drop-Shoulder Fit", "Distressed Vintage Mineral Wash", "Thick Ribbed Crew Neck"]
   },
 
 {
@@ -702,30 +551,6 @@ const PRODUCTS_DATA = [
     sizes: ["8-9Y", "10-11Y", "12-13Y", "14-15Y"],
     description: "Collegiate heritage reimagined for the youth. Features custom chenille 'L' embroidery on the chest, supple vegan leather sleeves, and striped ribbed collar.",
     features: ["Heavy wool-blend body", "Supple vegan leather sleeves", "Chenille 'L26' chest patch", "Snap button front closure"]
-  },
-
-{
-    id: "leg-tee-04",
-    name: "Juniors Boxy Heavyweight Skate Graphic Tee",
-    brand: "LEGACY",
-    gender: "juniors",
-    category: "graphic-tees",
-    subCategory: "t-shirts",
-    price: 1290,
-    originalPrice: 1790,
-    tag: "JUNIORS STREETWEAR",
-    badge: "Trending",
-    rating: 4.9,
-    reviews: 84,
-    image: "./images/juniors_skate_tee.jpg",
-    secondaryImage: "./images/juniors_skate_tee_detail.jpg",
-    colors: [
-      { name: "Washed Black", code: "#222222" },
-      { name: "Cobalt Blue", code: "#295094" }
-    ],
-    sizes: ["8-9Y", "10-11Y", "12-13Y", "14-15Y"],
-    description: "Bold skate-inspired puff-print 'LEGACY CREW' graphic. Cut loose and boxy from durable 240 GSM organic cotton.",
-    features: ["240 GSM organic cotton", "3D Puff print detailing", "Durable reinforced neckband", "Relaxed dropped shoulders"]
   },
 
 {

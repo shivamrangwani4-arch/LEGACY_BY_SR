@@ -1557,3 +1557,262 @@ button {
     justify-content: space-between;
   }
 }
+
+/* ====================================================
+   MOBILE & RESPONSIVE REFINEMENTS (MAX-WIDTH: 768px)
+   ==================================================== */
+@media (max-width: 768px) {
+  /* Announcement Bar */
+  .announcement-bar {
+    font-size: 0.65rem;
+    padding: 6px 12px;
+  }
+  .currency-selector select {
+    font-size: 0.65rem;
+    padding: 2px 4px;
+  }
+
+  /* Header / App Bar: Luxury, proportional spacing */
+  .header-inner {
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hamburger-btn {
+    width: 22px;
+    height: 16px;
+    cursor: pointer;
+  }
+  .hamburger-btn span {
+    height: 2px;
+  }
+
+  /* Brand Logo: Clean, Proportional, Balanced */
+  .brand-logo-container {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand-logo {
+    font-size: 1.3rem;
+    letter-spacing: 0.12em;
+    line-height: 1.1;
+  }
+
+  .brand-est {
+    font-size: 0.48rem;
+    letter-spacing: 0.28em;
+    margin-top: 1px;
+  }
+
+  /* Nav Right Icons */
+  .nav-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .icon-btn svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .cart-count-badge {
+    top: -5px;
+    right: -7px;
+    min-width: 15px;
+    height: 15px;
+    font-size: 0.58rem;
+  }
+
+  /* Gender Navigation */
+  .gender-nav {
+    gap: 18px;
+    padding: 6px 12px 10px;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .gender-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hero Slider */
+  .hero-slider-container {
+    height: 58vh;
+    min-height: 420px;
+  }
+
+  .hero-slide-content {
+    padding: 24px 18px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.82rem;
+  }
+
+  /* Category Spotlight Reel */
+  .category-spotlight-section {
+    padding: 24px 0 16px;
+  }
+
+  .spotlight-scroll-wrapper {
+    gap: 10px;
+    padding: 0 14px;
+  }
+
+  .spotlight-card {
+    flex: 0 0 140px;
+    min-width: 140px;
+    max-width: 150px;
+  }
+
+  .spotlight-card-title {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Categories In Focus Section */
+  .categories-in-focus-section {
+    padding: 24px 14px 60px;
+  }
+
+  .section-header {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Category Filter Tabs: Smooth swipeable horizontal rail */
+  .category-filter-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 4px 14px 16px;
+    margin-bottom: 22px;
+  }
+  .category-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 7px 15px;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Products Grid */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-badge-pill {
+    top: 8px;
+    left: 8px;
+    font-size: 0.58rem;
+    padding: 3px 6px;
+  }
+
+  .product-wishlist-btn {
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+  }
+  .product-wishlist-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .product-name {
+    font-size: 0.82rem;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  .product-brand-tag {
+    font-size: 0.62rem;
+  }
+
+  .product-current-price {
+    font-size: 0.86rem;
+  }
+
+  .product-original-price {
+    font-size: 0.72rem;
+  }
+
+  /* Cart Drawer Mobile */
+  .cart-drawer, .nav-drawer {
+    width: 88vw;
+    max-width: 380px;
+  }
+
+  /* Toast Container */
+  .toast-container {
+    top: 14px;
+    right: 14px;
+    left: 14px;
+  }
+  .toast-msg {
+    font-size: 0.72rem;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-logo {
+    font-size: 1.15rem;
+    letter-spacing: 0.1em;
+  }
+  .nav-right {
+    gap: 9px;
+  }
+  .icon-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+  .spotlight-card {
+    flex: 0 0 125px;
+    min-width: 125px;
+  }
+}
+
