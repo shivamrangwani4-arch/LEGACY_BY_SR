@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGACY (EST. 2026) | Premium Streetwear & Sartorial Atelier Pakistan</title>
+  <meta name="description" content="LEGACY (EST. 2026) - Luxury streetwear, Airflex pants, Gurkha trousers, motorsport jerseys, resort shirts, and graphic tees in Pakistan. Cash on Delivery available.">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Announcement Bar with Pakistani Currency & Cash on Delivery Notice -->
+  <div class="announcement-bar">
+    <div style="width: 80px;"></div>
+    <div class="announcement-text">
+      FREE EXPRESS DELIVERY ACROSS PAKISTAN ON ORDERS OVER RS. 3,500 | CASH ON DELIVERY (COD) AVAILABLE
+    </div>
+    <div class="currency-selector">
+      <select id="currencySelect" aria-label="Select Currency">
+        <option value="PKR" selected>PKR (Rs.)</option>
+        <option value="USD">USD ($)</option>
+        <option value="EUR">EUR (€)</option>
+        <option value="GBP">GBP (£)</option>
+        <option value="AED">AED</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-wrapper" id="siteHeader">
+    <div class="header-inner">
+      <!-- Left: Hamburger Menu -->
+      <div class="nav-left">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Center: Brand Logo (EST. 2026) -->
+      <div class="brand-logo-container">
+        <a href="#" class="brand-logo" onclick="setCategory('all'); setGender('all'); return false;">LEGACY</a>
+        <span class="brand-est">EST. 2026</span>
+      </div>
+
+      <!-- Right: Search, Wishlist, Bag -->
+      <div class="nav-right">
+        <button class="icon-btn" id="searchTriggerBtn" aria-label="Search Catalog">
+          <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+        </button>
+        <button class="icon-btn" onclick="filterBySlide('all', 'all'); document.getElementById('categoriesInFocus').scrollIntoView({behavior: 'smooth'});" aria-label="Wishlist">
+          <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+          <span class="cart-count-badge" id="wishlistCountBadge" style="background-color: #3b3c40;">0</span>
+        </button>
+        <button class="icon-btn" id="openCartBtn" aria-label="View Shopping Bag">
+          <i data-lucide="shopping-bag" style="width: 20px; height: 20px;"></i>
+          <span class="cart-count-badge" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Gender Nav Subbar (ALL | MEN | WOMEN | JUNIORS) -->
+    <nav class="gender-nav" id="genderNav">
+      <a href="#all" class="gender-link active" data-gender="all">ALL</a>
+      <a href="#men" class="gender-link" data-gender="men">MEN</a>
+      <a href="#women" class="gender-link" data-gender="women">WOMEN</a>
+      <a href="#juniors" class="gender-link" data-gender="juniors">JUNIORS</a>
+    </nav>
+  </header>
+
+  <!-- Hero Campaign Slider -->
+  <section class="hero-slider-container" id="heroSliderSection">
+    <div id="heroSlider"></div>
+    <!-- Pagination Dots -->
+    <div class="hero-slider-dots" id="heroDots"></div>
+  </section>
+
+  <!-- Category Spotlight Reel (Direct Interactive Category Switchers) -->
+  <section class="category-spotlight-section">
+    <div class="spotlight-scroll-wrapper">
+      <!-- 1. GRAPHIC TEES (Farhan Saeed Edition) -->
+      <div class="spotlight-card" data-category="graphic-tees" title="Click to view Graphic Tees Collection">
+        <img src="./images/farhan_legacy_tee.jpg" alt="Farhan Saeed x LEGACY Graphic Tee">
+        <div class="spotlight-card-overlay">
+          <span class="spotlight-card-title">GRAPHIC TEES</span>
+        </div>
+      </div>
+      <!-- 2. GURKHA PANTS -->
+      <div class="spotlight-card" data-category="gurkha-pants" title="Click to view Gurkha Pants Collection">
+        <img src="./images/legacy_gurkha_smartfit.png" alt="Gurkha Smart Fit">
+        <div class="spotlight-card-overlay">
+          <span class="spotlight-card-title">GURKHA PANTS</span>
+        </div>
+      </div>
+      <!-- 3. DENIM TROUSERS -->
+      <div class="spotlight-card" data-category="denim" title="Click to view Denim Trousers Collection">
+        <img src="./images/legacy_denim_trousers.jpg" alt="Selvedge Denim">
+        <div class="spotlight-card-overlay">
+          <span class="spotlight-card-title">DENIM TROUSERS</span>
+        </div>
+      </div>
+      <!-- 4. KNIT POLOS -->
+      <div class="spotlight-card" data-category="knit-polos" title="Click to view Knit Polos Collection">
+        <img src="./images/legacy_cableknit_polo.jpg" alt="Cable Knit Polos">
+        <div class="spotlight-card-overlay">
+          <span class="spotlight-card-title">KNIT POLOS</span>
+        </div>
+      </div>
+      <!-- 5. MOTORSPORT -->
+      <div class="spotlight-card" data-category="motorsport" title="Click to view Motorsport Collection">
+        <img src="./images/legacy_motorsport_jersey_front.jpg" alt="Motorsport Streetwear">
+        <div class="spotlight-card-overlay">
+          <span class="spotlight-card-title">MOTORSPORT</span>
+        </div>
+      </div>
+      <!-- 6. RESORT SHIRTS -->
+      <div class="spotlight-card" data-category="resort-shirts" title="Click to view Resort Shirts Collection">
+        <img src="./images/legacy_floral_resort_shirt.jpg" alt="Resort Floral Shirts">
+        <div class="spotlight-card-overlay">
+          <span class="spotlight-card-title">RESORT SHIRTS</span>
+        </div>
+      </div>
+      <!-- 7. AIRFLEX PANTS -->
+      <div class="spotlight-card" data-category="airflex-pants" title="Click to view Airflex Pants Collection">
+        <img src="./images/legacy_airflex_pants.png" alt="Airflex Pants Regular Fit">
+        <div class="spotlight-card-overlay">
+          <span class="spotlight-card-title">AIRFLEX PANTS</span>
+        </div>
+      </div>
+      <!-- 8. WIDE LEG PANTS -->
+      <div class="spotlight-card" data-category="wideleg-pants" title="Click to view Wide Leg Pants Collection">
+        <img src="./images/legacy_pleated_wideleg.png" alt="Pleated Wide Leg Pants">
+        <div class="spotlight-card-overlay">
+          <span class="spotlight-card-title">WIDE LEG PANTS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories In Focus Section (30+ Trending Items Grid with PKR Pricing) -->
+  <section class="categories-in-focus-section" id="categoriesInFocus">
+    <div class="section-header">
+      <h2 class="section-title">Categories In Focus</h2>
+      <p class="section-subtitle" id="itemCountText">Curated Streetwear & Atelier Pieces</p>
+    </div>
+
+    <!-- Category Filter Tabs Matching Exact Spotlight Titles -->
+    <div class="category-filter-tabs">
+      <button class="filter-tab-btn active" data-category="all">All Items (30+)</button>
+      <button class="filter-tab-btn" data-category="graphic-tees">Graphic Tees</button>
+      <button class="filter-tab-btn" data-category="gurkha-pants">Gurkha Pants</button>
+      <button class="filter-tab-btn" data-category="denim">Denim Trousers</button>
+      <button class="filter-tab-btn" data-category="knit-polos">Knit Polos</button>
+      <button class="filter-tab-btn" data-category="motorsport">Motorsport</button>
+      <button class="filter-tab-btn" data-category="resort-shirts">Resort Shirts</button>
+      <button class="filter-tab-btn" data-category="airflex-pants">Airflex Pants</button>
+      <button class="filter-tab-btn" data-category="wideleg-pants">Wide Leg Pants</button>
+      <button class="filter-tab-btn" data-category="shirts">Shackets</button>
+      <button class="filter-tab-btn" data-category="shorts">Shorts & Skorts</button>
+      <button class="filter-tab-btn" data-category="activewear">Activewear</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="productGrid"></div>
+  </section>
+
+  <!-- Editorial Brand Story & Craftsmanship Manifesto -->
+  <section class="editorial-banner-section">
+    <div class="editorial-grid">
+      <div class="editorial-content-box">
+        <span class="editorial-tag">THE LEGACY ARCHIVE · EST. 2026</span>
+        <h2 class="editorial-headline">HIGH-END STREETWEAR AT HONEST PAKISTANI PRICES</h2>
+        <p class="editorial-desc">
+          Crafted for the modern trendsetter in Pakistan. <strong>LEGACY (EST. 2026)</strong> delivers international luxury aesthetics without unreasonable price tags. Experience our AI-crafted motorsport streetwear jerseys, 4-way stretch Airflex trousers, hand-pleated Gurkha pants, and 280 GSM heavyweight brutalist graphic tees with instant Cash on Delivery across Karachi, Lahore, Islamabad, and nationwide.
+        </p>
+        
+        <div class="editorial-badges-row">
+          <div class="editorial-stat-item">
+            <h4>Rs. 1,290</h4>
+            <p>Graphic Tees from</p>
+          </div>
+          <div class="editorial-stat-item">
+            <h4>Rs. 3,190</h4>
+            <p>Airflex & Gurkhas from</p>
+          </div>
+          <div class="editorial-stat-item">
+            <h4>COD</h4>
+            <p>All Across Pakistan</p>
+          </div>
+        </div>
+
+        <button class="hero-cta-btn" style="width: fit-content;" onclick="setCategory('all'); document.getElementById('categoriesInFocus').scrollIntoView({behavior: 'smooth'});">
+          Explore The Full FW26 Collection
+        </button>
+      </div>
+
+      <div class="editorial-images-collage">
+        <div class="editorial-img-box">
+          <img src="./images/legacy_motorsport_jersey.jpg" alt="Legacy Motorsport Jersey">
+        </div>
+        <div class="editorial-img-box">
+          <img src="./images/legacy_cableknit_polo.jpg" alt="Legacy Cable Knit Polo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-Out Mobile Navigation Drawer (Exact Match to Reference Image 5) -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <span style="font-family: var(--font-brand); font-weight: 800; letter-spacing: 0.15em;">LEGACY EST. 2026</span>
+      <button id="closeDrawerBtn" aria-label="Close Navigation">
+        <i data-lucide="x" style="width: 22px; height: 22px;"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Gender Tabs (ALL | MEN | WOMEN | JUNIORS) -->
+    <div class="drawer-gender-tabs" style="grid-template-columns: repeat(4, 1fr);">
+      <button class="drawer-gender-tab active" data-gender="all">ALL</button>
+      <button class="drawer-gender-tab" data-gender="men">MEN</button>
+      <button class="drawer-gender-tab" data-gender="women">WOMEN</button>
+      <button class="drawer-gender-tab" data-gender="juniors">JRS</button>
+    </div>
+
+    <div class="drawer-menu-content">
+      <!-- Section: NEW IN -->
+      <h3 class="drawer-section-title">NEW IN</h3>
+      <ul class="drawer-links-list">
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="all">
+            <span>FW 2026-2027</span>
+            <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="all">
+            <span>SEASON PREVIEW FW 26-27</span>
+            <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Section: SHOP BY CATEGORIES -->
+      <h3 class="drawer-section-title">SHOP BY CATEGORIES</h3>
+      <ul class="drawer-links-list">
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="all">VIEW ALL (30+)</a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="motorsport">MOTORSPORT RACING</a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="resort-shirts">RESORT SHIRTS</a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="knit-polos">KNIT POLOS</a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="graphic-tees">GRAPHIC TEES</a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="gurkha-pants">GURKHA PANTS</a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="airflex-pants">AIRFLEX PANTS</a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="wideleg-pants">WIDE LEG PANTS</a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#" class="drawer-category-link" data-category="denim">DENIM TROUSERS</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="drawer-footer">
+      <span>PAKISTAN ATELIER</span>
+      <span>EST. 2026</span>
+    </div>
+  </aside>
+
+  <!-- Floating Notification Bell Action Button (Matching Reference Image 5) -->
+  <button class="floating-notif-btn" onclick="showToast('Special Drop: Motorsport Jersey & Cable Knit Polos now in stock with Cash on Delivery!')" aria-label="Notifications">
+    <i data-lucide="bell" style="width: 22px; height: 22px;"></i>
+  </button>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div style="display: flex; align-items: baseline; gap: 8px;">
+        <h3 style="font-family: var(--font-brand); text-transform: uppercase; font-size: 1.1rem;">Shopping Bag</h3>
+        <span style="font-size: 0.8rem; color: var(--color-gray-mid);">EST. 2026</span>
+      </div>
+      <button id="closeCartBtn" aria-label="Close Bag">
+        <i data-lucide="x" style="width: 22px; height: 22px;"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker across Pakistan -->
+    <div class="cart-free-shipping-bar">
+      <p class="free-shipping-text" id="freeShippingText">
+        Add <strong>Rs. 3,500</strong> more for <strong>FREE EXPRESS DELIVERY IN PAKISTAN</strong>
+      </p>
+      <div class="shipping-progress-track">
+        <div class="shipping-progress-fill" id="shippingProgressFill"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll List -->
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <!-- Cart Footer with Totals & Checkout -->
+    <div class="cart-footer">
+      <div class="coupon-row">
+        <input type="text" id="couponInput" class="coupon-input" placeholder="Promo code (e.g. LEGACY2026)">
+        <button id="applyCouponBtn" class="coupon-btn">Apply</button>
+      </div>
+
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">Rs. 0</strong>
+      </div>
+      <div class="cart-summary-row" style="color: var(--color-badge-red);">
+        <span>Discount</span>
+        <strong id="cartDiscount">-Rs. 0</strong>
+      </div>
+      <div class="cart-summary-row">
+        <span>Shipping (Pakistan)</span>
+        <span style="color: #137333; font-weight: 600;">FREE over Rs. 3,500</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Estimated Total</span>
+        <span id="cartTotal">Rs. 0</span>
+      </div>
+
+      <button class="checkout-btn" id="cartCheckoutBtn">
+        Proceed to Checkout (COD Available)
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal-backdrop" id="quickViewModal">
+    <div class="quickview-card">
+      <button class="modal-close-btn" onclick="closeQuickView()" aria-label="Close Quick View">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <div id="quickViewContent" style="display: contents;"></div>
+    </div>
+  </div>
+
+  <!-- Live Search Overlay Modal -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <span style="font-family: var(--font-brand); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase;">
+          Search LEGACY Pakistan Catalog
+        </span>
+        <button id="closeSearchBtn" aria-label="Close Search">
+          <i data-lucide="x" style="width: 26px; height: 26px;"></i>
+        </button>
+      </div>
+
+      <div class="search-input-box">
+        <i data-lucide="search" style="width: 28px; height: 28px; margin-right: 12px; color: var(--color-gray-mid);"></i>
+        <input type="text" id="searchInput" placeholder="Search motorsport, airflex, cable knit, gurkha pants, graphic tees..." autocomplete="off">
+      </div>
+
+      <div class="trending-tags-row">
+        <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-gray-mid); margin-right: 4px;">Trending:</span>
+        <button class="trending-tag-pill" data-tag="Motorsport">Motorsport Jersey</button>
+        <button class="trending-tag-pill" data-tag="Airflex">Airflex Pants</button>
+        <button class="trending-tag-pill" data-tag="Gurkha">Gurkha Smart Fit</button>
+        <button class="trending-tag-pill" data-tag="Cable-Knit">Cable-Knit Polo</button>
+        <button class="trending-tag-pill" data-tag="Floral">Resort Floral Shirt</button>
+        <button class="trending-tag-pill" data-tag="Graphic">Graphic Tees</button>
+      </div>
+
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <!-- Simulated Checkout Modal with Pakistani Cities & Cash On Delivery -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="quickview-card" style="max-width: 650px; display: block; padding: 36px 30px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; border-bottom: 1px solid var(--color-gray-light); padding-bottom: 14px;">
+        <div class="brand-logo-container" style="align-items: flex-start;">
+          <span class="brand-logo" style="font-size: 1.5rem;">LEGACY</span>
+          <span class="brand-est">PAKISTAN EXPRESS CHECKOUT</span>
+        </div>
+        <button id="closeCheckoutBtn" aria-label="Close Checkout">
+          <i data-lucide="x" style="width: 22px; height: 22px;"></i>
+        </button>
+      </div>
+
+      <form id="checkoutForm">
+        <h4 style="font-family: var(--font-brand); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 12px;">Customer & Delivery Details</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+          <input type="text" required placeholder="Full Name" style="padding: 10px 14px; border: 1px solid var(--color-gray-light); border-radius: 2px;">
+          <input type="tel" required placeholder="Mobile Number (e.g. 0300-1234567)" style="padding: 10px 14px; border: 1px solid var(--color-gray-light); border-radius: 2px;">
+        </div>
+        <input type="email" required placeholder="Email Address for Order Tracking" style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-gray-light); border-radius: 2px; margin-bottom: 12px;">
+        <input type="text" required placeholder="Complete Street Address / House / Flat No." style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-gray-light); border-radius: 2px; margin-bottom: 12px;">
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;">
+          <select required style="padding: 10px 14px; border: 1px solid var(--color-gray-light); border-radius: 2px; background: #fff; font-size: 0.85rem;">
+            <option value="">Select City in Pakistan</option>
+            <option value="Karachi">Karachi</option>
+            <option value="Lahore">Lahore</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Rawalpindi">Rawalpindi</option>
+            <option value="Faisalabad">Faisalabad</option>
+            <option value="Multan">Multan</option>
+            <option value="Peshawar">Peshawar</option>
+            <option value="Quetta">Quetta</option>
+            <option value="Sialkot">Sialkot</option>
+            <option value="Gujranwala">Gujranwala</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Other">Other Nationwide City</option>
+          </select>
+          <input type="text" placeholder="Postal Code" style="padding: 10px 14px; border: 1px solid var(--color-gray-light); border-radius: 2px;">
+        </div>
+
+        <h4 style="font-family: var(--font-brand); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 12px;">Payment Method</h4>
+        <div style="border: 1px solid var(--color-gray-light); border-radius: 2px; padding: 14px; margin-bottom: 24px; background: var(--color-offwhite);">
+          <label style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; font-weight: 700; cursor: pointer; margin-bottom: 8px;">
+            <input type="radio" name="paymentMethod" checked>
+            <span>Cash on Delivery (COD) - Pay when your parcel arrives</span>
+          </label>
+          <label style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; font-weight: 500; cursor: pointer; color: #555;">
+            <input type="radio" name="paymentMethod">
+            <span>JazzCash / EasyPaisa / Online Card Payment</span>
+          </label>
+        </div>
+
+        <div style="background-color: var(--color-offwhite); padding: 16px; border-radius: 2px; margin-bottom: 20px;">
+          <div id="checkoutOrderSummaryList"></div>
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-brand); font-weight: 800; font-size: 1.1rem; border-top: 1px solid var(--color-gray-light); padding-top: 12px; margin-top: 10px;">
+            <span>Payable Amount</span>
+            <span id="checkoutModalTotal">Rs. 0</span>
+          </div>
+        </div>
+
+        <button type="submit" class="checkout-btn" style="margin-top: 0;">
+          Confirm Order via Cash on Delivery
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Global Footer -->
+  <footer class="footer-section">
+    <div class="footer-inner">
+      <div>
+        <div class="brand-logo-container" style="align-items: flex-start; margin-bottom: 16px;">
+          <span class="brand-logo" style="font-size: 2rem;">LEGACY</span>
+          <span class="brand-est">EST. 2026 · PAKISTAN</span>
+        </div>
+        <p style="font-size: 0.85rem; color: #a4a7b0; line-height: 1.7; max-width: 320px;">
+          Redefining Pakistani streetwear with honest pricing, Airflex innovation, architectural Gurkha tailoring, and heavy cotton graphic tees.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Collections</h4>
+        <ul class="footer-links-list">
+          <li><a href="#" onclick="setGender('men'); return false;">Men's Streetwear</a></li>
+          <li><a href="#" onclick="setGender('women'); return false;">Women's Atelier</a></li>
+          <li><a href="#" onclick="setGender('juniors'); return false;">Juniors Archive</a></li>
+          <li><a href="#" onclick="setCategory('pants-gurkhas'); return false;">Airflex & Gurkha Pants</a></li>
+          <li><a href="#" onclick="setCategory('shirts'); return false;">Motorsport & Resort Shirts</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Client Care</h4>
+        <ul class="footer-links-list">
+          <li><a href="#" onclick="showToast('Free Express Shipping across Pakistan on orders over Rs. 3,500.'); return false;">Free Shipping in Pakistan</a></li>
+          <li><a href="#" onclick="showToast('Cash on Delivery available nationwide in 2-3 business days.'); return false;">Cash on Delivery (COD)</a></li>
+          <li><a href="#" onclick="showToast('7-Day Easy Exchange Policy across Pakistan.'); return false;">7-Day Easy Exchange</a></li>
+          <li><a href="#" onclick="showToast('Legacy Support: WhatsApp 0300-LEGACY-26'); return false;">WhatsApp Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">VIP Drop Alerts</h4>
+        <p style="font-size: 0.8rem; color: #9da0a8; margin-bottom: 12px;">
+          Get notified for exclusive flash drops, discount vouchers & restocks.
+        </p>
+        <form class="footer-newsletter-input" onsubmit="event.preventDefault(); showToast('Welcome to LEGACY VIP! Use voucher LEGACY2026 for 20% off.'); this.reset();">
+          <input type="email" required placeholder="Enter email address">
+          <button type="submit">JOIN</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <span>© 2026 LEGACY PAKISTAN. ALL RIGHTS RESERVED. ACADEMY SHOWCASE EDITION.</span>
+      <div style="display: flex; gap: 20px;">
+        <a href="#" onclick="showToast('Delivery in 2-3 Days'); return false;">DELIVERY</a>
+        <a href="#" onclick="showToast('Cash on Delivery'); return false;">COD INFO</a>
+        <a href="#" onclick="showToast('WhatsApp Support: 0300-LEGACY'); return false;">WHATSAPP</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/products.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

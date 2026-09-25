@@ -1,0 +1,21 @@
+{
+  "name": "legacy-clothing-brand",
+  "version": "1.0.0",
+  "description": "LEGACY (EST. 2026) - Luxury Streetwear & Sartorial Atelier E-Commerce Web Application",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx serve -l 3000 ."
+  },
+  "keywords": [
+    "clothing",
+    "ecommerce",
+    "streetwear",
+    "legacy",
+    "gurkha-pants",
+    "denim",
+    "graphic-tee"
+  ],
+  "author": "LEGACY Atelier",
+  "license": "MIT"
+}

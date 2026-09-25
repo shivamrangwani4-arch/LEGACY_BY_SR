@@ -1,0 +1,902 @@
+// LEGACY (EST. 2026) - Comprehensive Product Catalog
+// User-Configured Starting 4: Selvedge Denim, Cable-Knit Polo, Pleated Wide-Leg Pants, Motorsport Racing Jersey. All remaining items placed below.
+
+const PRODUCTS_DATA = [
+{
+    id: "leg-denim-01",
+    name: "Relaxed Japanese Selvedge Denim Trousers by LEGACY",
+    brand: "LEGACY",
+    gender: "men",
+    category: "denim",
+    subCategory: "jeans",
+    price: 3990,
+    originalPrice: 5290,
+    tag: "LEGACY DENIM",
+    isAiGenerated: true,
+    badge: "New Arrival",
+    rating: 4.8,
+    reviews: 76,
+    image: "./images/legacy_denim_trousers.jpg",
+    secondaryImage: "./images/legacy_denim_trousers_detail.jpg",
+    colors: [
+      { name: "Vintage Indigo", code: "#273a52" },
+      { name: "Raw Washed Blue", code: "#3a5677" },
+      { name: "Faded Stonewash", code: "#6c89a7" }
+    ],
+    sizes: ["30", "32", "34", "36"],
+    description: "Handcrafted from authentic 14.5oz Japanese selvedge denim. Designed with a generous wide-leg cut, subtle contrast white topstitching, and our debossed leather 'LEGACY' archive patch.",
+    features: ["14.5oz Japanese Selvedge Denim", "Wide-leg relaxed puddle drape", "Custom silver-toned hardware", "Reinforced back pockets"]
+  },
+
+{
+    id: "leg-polo-01",
+    name: "Italian Textured Cable-Knit Open Collar Polo",
+    brand: "LEGACY",
+    gender: "men",
+    category: "knit-polos",
+    subCategory: "polos",
+    price: 2990,
+    originalPrice: 3890,
+    tag: "OLD MONEY LUXE",
+    isAiGenerated: true,
+    badge: "Bestseller",
+    rating: 5.0,
+    reviews: 162,
+    image: "./images/legacy_cableknit_polo.jpg",
+    secondaryImage: "./images/legacy_cableknit_polo_detail.jpg",
+    colors: [
+      { name: "Warm Cashmere Beige", code: "#d8cbb8" },
+      { name: "Midnight Navy", code: "#1a2536" },
+      { name: "Raw Ecru", code: "#f4f1ea" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "The epitome of understated modern luxury. Knitted from ultra-soft fine-gauge cotton-cashmere blend yarn featuring tactile micro-cable braids and an open spread Johnny collar.",
+    features: ["Ultra-fine Cotton-Cashmere Blend", "Architectural micro-cable knit pattern", "Relaxed open spread collar without buttons", "Ribbed cuffs and hemband"]
+  },
+
+{
+    id: "leg-wide-01",
+    name: "Minimalist Double-Pleated Trousers // WIDE LEG FIT",
+    brand: "LEGACY",
+    gender: "men",
+    category: "wideleg-pants",
+    subCategory: "trousers",
+    price: 3490,
+    originalPrice: 4690,
+    tag: "WIDE LEG ATELIER",
+    isAiGenerated: true,
+    badge: "Trending",
+    rating: 4.9,
+    reviews: 110,
+    image: "./images/legacy_pleated_wideleg.png",
+    secondaryImage: "./images/legacy_pleated_wideleg_detail.jpg",
+    colors: [
+      { name: "Chalk Cream", code: "#ece8df" },
+      { name: "Taupe Sand", code: "#b5a38f" },
+      { name: "Obsidian Black", code: "#111111" }
+    ],
+    sizes: ["30", "32", "34", "36"],
+    description: "The modern architectural wide-leg fit. Tailored with sharp forward double pleats, a clean waistband, and a relaxed fluid drape that pools perfectly over slides or sneakers.",
+    features: ["Breathable High-Twist Cotton Gabardine", "Forward architectural double pleats", "Relaxed wide-leg puddle drape", "Curved slash front pockets"]
+  },
+
+{
+    id: "leg-moto-01",
+    name: "LEGACY Motorsport Racing Streetwear Button-Up",
+    brand: "LEGACY",
+    gender: "men",
+    category: "motorsport",
+    subCategory: "shirts",
+    price: 2890,
+    originalPrice: 3790,
+    tag: "MOTORSPORT HERO",
+    isAiGenerated: true,
+    badge: "Trending",
+    rating: 5.0,
+    reviews: 148,
+    image: "./images/legacy_motorsport_jersey_front.jpg",
+    secondaryImage: "./images/legacy_motorsport_jersey_detail.jpg",
+    colors: [
+      { name: "Monochrome Racing White/Black", code: "#111111" },
+      { name: "Stealth Charcoal", code: "#2e2e2e" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    description: "Inspired by archival Grand Prix and Japanese drift culture. Breathable structured cotton-poly twill with high-contrast monochrome blocking, notch lapels, and high-density screen-printed 'LEGACY MOTORSPORT' insignia.",
+    features: ["Breathable Structured Cotton-Poly Twill", "Monochrome High-Contrast Racing Graphics", "Relaxed Boxy Camp Collar Fit", "Reinforced Placket"]
+  },
+
+{
+    id: "leg-tee-farhan",
+    name: "Farhan Saeed × LEGACY Oversized Drop-Shoulder Tee (EST. 2026)",
+    brand: "LEGACY",
+    gender: "men",
+    category: "graphic-tees",
+    subCategory: "t-shirts",
+    price: 1990,
+    originalPrice: 2790,
+    tag: "AMBASSADOR DROP",
+    isAiGenerated: true,
+    badge: "Farhan Saeed Edition",
+    rating: 5.0,
+    reviews: 192,
+    image: "./images/farhan_legacy_tee.jpg",
+    secondaryImage: "./images/farhan_legacy_tee_detail.jpg",
+    colors: [
+      { name: "Asphalt Mineral Black", code: "#181818" },
+      { name: "Off White Vintage", code: "#f0ede6" },
+      { name: "Washed Charcoal", code: "#333333" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    description: "Official campaign edition worn by celebrity ambassador Farhan Saeed. Heavyweight 280 GSM combed cotton with an architectural boxy drop-shoulder cut, pre-shrunk vintage mineral dye, and high-density screen-printed 'LEGACY EST. 2026' brutalist signature chest insignia.",
+    features: ["Celebrity Ambassador Campaign Piece (Farhan Saeed)", "280 GSM Heavyweight Combed Cotton", "Relaxed Boxy Drop-Shoulder Silhouette", "Pre-shrunk vintage wash & reinforced collar"]
+  },
+
+{
+    id: "leg-fem-durefishan",
+    name: "Dur-e-Fishan Saleem × LEGACY Golden Hour Silk Atelier Top",
+    brand: "LEGACY",
+    gender: "women",
+    category: "shirts",
+    subCategory: "shirts",
+    price: 2490,
+    originalPrice: 3490,
+    tag: "AMBASSADOR DROP",
+    isAiGenerated: true,
+    badge: "Dur-e-Fishan Edition",
+    rating: 5.0,
+    reviews: 218,
+    image: "./images/durefishan_legacy_top.jpg",
+    secondaryImage: "./images/durefishan_legacy_top_detail.jpg",
+    colors: [
+      { name: "Golden Hour Ochre", code: "#9e5c2b" },
+      { name: "Raw Ecru Silk", code: "#ece5d8" },
+      { name: "Obsidian Noir", code: "#121212" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Official campaign edition worn by actress & style icon Dur-e-Fishan Saleem. Tailored from a fluid silk-modal blend in a radiant golden hour palette, featuring an elegant relaxed neckline, delicate French cuffs, and subtle debossed 'LEGACY ATELIER' gold hardware.",
+    features: ["Celebrity Ambassador Campaign Piece (Dur-e-Fishan Saleem)", "Fluid Silk-Modal Breathable Blend", "Contemporary Atelier Streetwear Cut", "Concealed mother-of-pearl buttons"]
+  },
+
+{
+    id: "leg-tee-01",
+    name: "LEGACY Oversized Graphic Tee (EST. 2026)",
+    brand: "LEGACY",
+    gender: "men",
+    category: "graphic-tees",
+    subCategory: "t-shirts",
+    price: 1890,
+    originalPrice: 2490,
+    tag: "SIGNATURE PIECE",
+    isAiGenerated: true,
+    badge: "Bestseller",
+    rating: 4.9,
+    reviews: 142,
+    image: "./images/legacy_graphic_tee.jpg",
+    secondaryImage: "./images/legacy_graphic_tee_detail.jpg",
+    colors: [
+      { name: "Washed Black", code: "#1a1a1a" },
+      { name: "Off White", code: "#f0ede6" },
+      { name: "Vintage Charcoal", code: "#383838" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    description: "The quintessential LEGACY streetwear staple. Crafted from custom heavyweight 280 GSM combed cotton with a relaxed boxy drape, dropped shoulders, and high-density screen-printed 'LEGACY EST. 2026' brutalist branding.",
+    features: ["280 GSM 100% Combed Cotton", "Boxy Streetwear Fit", "Pre-shrunk vintage wash", "Reinforced ribbed collar"]
+  },
+
+{
+    id: "leg-gurk-01",
+    name: "Double-Buckle Gurkha Trousers // SMART FIT",
+    brand: "LEGACY",
+    gender: "men",
+    category: "gurkha-pants",
+    subCategory: "trousers",
+    price: 3790,
+    originalPrice: 4990,
+    tag: "GURKHA SIGNATURE",
+    isAiGenerated: true,
+    badge: "Iconic",
+    rating: 5.0,
+    reviews: 167,
+    image: "./images/legacy_gurkha_smartfit.png",
+    secondaryImage: "./images/legacy_gurkha_smartfit_detail.jpg",
+    colors: [
+      { name: "Off-White Sand", code: "#ece7de" },
+      { name: "Military Olive", code: "#4c553d" },
+      { name: "Formal Black", code: "#181818" }
+    ],
+    sizes: ["30", "32", "34", "36"],
+    description: "The definitive Sartorial icon. Built with an extended wrap waistband, dual side-buckle brass adjusters, and deep forward double pleats. Eliminates the need for a belt while delivering a flattering high-waisted tailored taper.",
+    features: ["Double-buckle adjustable side tabs (no belt required)", "Extended waistband with hook & bar closure", "Deep architectural forward double pleats", "100% High-Twist Cotton Gabardine"]
+  },
+
+{
+    id: "leg-shkt-01",
+    name: "FW26 Heavy Plaid Flannel Overshirt (Shacket)",
+    brand: "LEGACY",
+    gender: "men",
+    category: "shirts",
+    subCategory: "shirts",
+    price: 3490,
+    originalPrice: 4490,
+    tag: "CAMPAIGN HERO",
+    isAiGenerated: true,
+    badge: "Campaign",
+    rating: 4.9,
+    reviews: 114,
+    image: "./images/hero_slide_1.jpg",
+    secondaryImage: "./images/hero_slide_1_detail.jpg",
+    colors: [
+      { name: "Cobalt & Cream Plaid", code: "#2e4868" },
+      { name: "Forest Shadow Plaid", code: "#2b3b2f" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Featured in our FW 2026-2027 lookbook. Heavyweight brushed wool-cotton blend crafted for transitional layering with twin flap chest pockets and genuine horn buttons.",
+    features: ["Brushed heavy wool blend", "Dual chest flap pockets", "Relaxed layering cut", "Satin-lined yoke"]
+  },
+
+{
+    id: "leg-moto-editorial",
+    name: "LEGACY Grand Prix Racing Studio Editorial Button-Up",
+    brand: "LEGACY",
+    gender: "men",
+    category: "motorsport",
+    subCategory: "shirts",
+    price: 2890,
+    originalPrice: 3690,
+    tag: "STUDIO EDITORIAL",
+    isAiGenerated: true,
+    badge: "Campaign Hero",
+    rating: 5.0,
+    reviews: 134,
+    image: "./images/legacy_motorsport_jersey.jpg",
+    secondaryImage: "./images/legacy_motorsport_jersey_detail.jpg",
+    colors: [
+      { name: "Monochrome Grand Prix", code: "#111111" },
+      { name: "Speedway Charcoal", code: "#282828" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    description: "Official studio campaign lookbook edition. Technical aero-mesh button-up with bold high-contrast VIKINGS racing crest and drop-shoulder streetwear cut. Photographed in minimalist brutalist studio setting.",
+    features: ["Aero-mesh breathable construction", "High-contrast Grand Prix graphics", "Relaxed camp collar silhouette", "Studio runway archive piece"]
+  },
+
+{
+    id: "leg-moto-03",
+    name: "LEGACY Trackside Motorsport Racing Graphic Tee (EST. 2026)",
+    brand: "LEGACY",
+    gender: "men",
+    category: "motorsport",
+    subCategory: "t-shirts",
+    price: 1990,
+    originalPrice: 2590,
+    tag: "STREET CULTURE",
+    badge: "Hot Drop",
+    rating: 4.8,
+    reviews: 112,
+    image: "./images/legacy_motorsport_tee.jpg",
+    secondaryImage: "./images/legacy_motorsport_tee_detail.jpg",
+    colors: [
+      { name: "Asphalt Charcoal", code: "#1a1a1a" },
+      { name: "Raw Ecru", code: "#ece8df" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    description: "280 GSM heavyweight brutalist streetwear tee featuring the 'LEGACY MOTORSPORT RACING DIVISION // EST. 2026' chest archive print and relaxed drop-shoulder cut.",
+    features: ["Heavy 280 GSM combed cotton", "High-density chest racing typography", "Oversized boxy drop-shoulder silhouette", "Reinforced neck ribbing"]
+  },
+
+{
+    id: "leg-tee-02",
+    name: "LEGACY 2026 ARCHIVE Acid-Wash Streetwear Tee",
+    brand: "LEGACY",
+    gender: "men",
+    category: "graphic-tees",
+    subCategory: "t-shirts",
+    price: 1990,
+    originalPrice: 2690,
+    tag: "ARCHIVE COLLECTION",
+    isAiGenerated: true,
+    badge: "Trending",
+    rating: 4.9,
+    reviews: 142,
+    image: "./images/legacy_vintage_archive_tee.jpg",
+    secondaryImage: "./images/legacy_vintage_archive_tee_detail.jpg",
+    colors: [
+      { name: "Mineral Washed Grey", code: "#404040" },
+      { name: "Faded Onyx", code: "#1f1f1f" }
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    description: "Heavyweight 280 GSM mineral-washed cotton with vintage distressed gothic 'LEGACY 2026 ARCHIVE' screen-printing. Dropped shoulders and raw hems create an authentic street aesthetic.",
+    features: ["280 GSM Mineral Acid-Washed Cotton", "Gothic Brutalist 'LEGACY 2026' Artwork", "Boxy Dropped-Shoulder Fit", "Pre-shrunk vintage wash"]
+  },
+
+{
+    id: "leg-air-01",
+    name: "Airflex 4-Way Stretch Chino Pants // REGULAR FIT",
+    brand: "LEGACY",
+    gender: "men",
+    category: "airflex-pants",
+    subCategory: "trousers",
+    price: 3190,
+    originalPrice: 4190,
+    tag: "PERFORMANCE ESSENTIAL",
+    isAiGenerated: true,
+    badge: "Viral Fit",
+    rating: 4.9,
+    reviews: 184,
+    image: "./images/legacy_airflex_pants.png",
+    secondaryImage: "./images/legacy_airflex_pants_detail.jpg",
+    colors: [
+      { name: "Khaki Stone", code: "#c9bda8" },
+      { name: "Midnight Navy", code: "#1e293b" },
+      { name: "Asphalt Grey", code: "#3a3d42" }
+    ],
+    sizes: ["30", "32", "34", "36", "38"],
+    description: "Engineered for total freedom of motion. Proprietary Airflex fabric blends combed long-staple cotton with 4-way technical elastane. Maintains crisp trousers structure from office meetings to evening lounges.",
+    features: ["Proprietary Airflex 4-Way Stretch recovery", "Wrinkle-resistant & breathable technical weave", "Hidden zippered security travel pocket", "Tailored regular fit through thigh and leg"]
+  },
+
+{
+    id: "leg-resort-01",
+    name: "Monochrome Botanical Floral Camp-Collar Shirt",
+    brand: "LEGACY",
+    gender: "men",
+    category: "resort-shirts",
+    subCategory: "shirts",
+    price: 2790,
+    originalPrice: 3590,
+    tag: "RESORT COLLECTION",
+    isAiGenerated: true,
+    badge: "Bestseller",
+    rating: 4.9,
+    reviews: 132,
+    image: "./images/legacy_floral_resort_shirt.jpg",
+    secondaryImage: "./images/legacy_floral_resort_shirt_detail.jpg",
+    colors: [
+      { name: "Bone White / Ink Floral", code: "#f5f3ef" },
+      { name: "Shadow Sage", code: "#6c8068" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Effortless vacation elegance. Lightweight airy rayon-linen blend featuring painterly monochrome black watercolor florals cascading along the lower hemline with a relaxed Cuban camp collar.",
+    features: ["Ultra-soft breathable Rayon-Linen Blend", "Artisanal monochrome floral placement print", "Relaxed Cuban spread collar", "Straight-cut hem with side vents"]
+  },
+
+{
+    id: "leg-polo-02",
+    name: "Minimalist Ribbed Knit Johnny Collar Polo",
+    brand: "LEGACY",
+    gender: "men",
+    category: "knit-polos",
+    subCategory: "polos",
+    price: 2490,
+    originalPrice: 3190,
+    tag: "SUMMER ESSENTIAL",
+    isAiGenerated: true,
+    badge: "Popular",
+    rating: 4.8,
+    reviews: 98,
+    image: "./images/hero_slide_detail.jpg",
+    secondaryImage: "./images/legacy_cableknit_polo_detail.jpg",
+    colors: [
+      { name: "Espresso Charcoal", code: "#2e2b2a" },
+      { name: "Oatmeal Melange", code: "#cfc8bc" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Knitted from long-staple organic cotton in a tactile vertical rib. Tailored with a modern relaxed Johnny collar and mother-of-pearl buttons.",
+    features: ["100% Organic Long-Staple Cotton", "Vertical micro-rib structure", "Open Johnny spread collar", "Ribbed cuff and hem"]
+  },
+
+{
+    id: "leg-gurk-02",
+    name: "Tailored Double-Buckle Gurkha Trousers in Olive",
+    brand: "LEGACY",
+    gender: "men",
+    category: "gurkha-pants",
+    subCategory: "trousers",
+    price: 3690,
+    originalPrice: 4790,
+    tag: "MILITARY ATELIER",
+    isAiGenerated: true,
+    badge: "Trending",
+    rating: 4.9,
+    reviews: 95,
+    image: "./images/hero_slide_3.jpg",
+    secondaryImage: "./images/legacy_gurkha_smartfit_detail.jpg",
+    colors: [
+      { name: "Olive Drab", code: "#4c553d" },
+      { name: "Sand Beige", code: "#d9cbba" }
+    ],
+    sizes: ["30", "32", "34", "36"],
+    description: "Rich olive drab military gabardine cut with a sharp front crease, double waistband cinch buckles, and reinforced slash pockets.",
+    features: ["High-rise military waistband", "Dual adjustable cinch buckles", "Reinforced slant pockets", "Clean tailored cuff hem"]
+  },
+
+{
+    id: "leg-wide-02",
+    name: "Women's Parachute Bungee Cargo Pants // SAGE GREEN",
+    brand: "LEGACY",
+    gender: "women",
+    category: "wideleg-pants",
+    subCategory: "trousers",
+    price: 2990,
+    originalPrice: 3890,
+    tag: "STREETWEAR TREND",
+    isAiGenerated: true,
+    badge: "Viral Drop",
+    rating: 4.9,
+    reviews: 154,
+    image: "./images/legacy_women_cargo_pants.jpg",
+    secondaryImage: "./images/legacy_women_cargo_pants_detail.jpg",
+    colors: [
+      { name: "Sage Earth Green", code: "#8fa38d" },
+      { name: "Gunmetal Slate", code: "#4a4c50" },
+      { name: "Obsidian Black", code: "#141414" }
+    ],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Trending ultra-wide parachute pants with an adjustable toggle bungee cord at the waist and ankles. Converts effortlessly between dramatic balloon flare and tapered cargo jogger.",
+    features: ["Featherlight crinkle tech ripstop fabric", "Adjustable bungee toggle cords at waist and hem", "Dual 3D accordion side cargo pockets", "Water-repellent finish"]
+  },
+
+{
+    id: "leg-denim-02",
+    name: "Structured Denim Cropped Shacket & Utility Set",
+    brand: "LEGACY",
+    gender: "women",
+    category: "denim",
+    subCategory: "shirts",
+    price: 3890,
+    originalPrice: 4990,
+    tag: "SEASON PREVIEW FW 26-27",
+    isAiGenerated: true,
+    badge: "Editorial Hero",
+    rating: 5.0,
+    reviews: 128,
+    image: "./images/hero_slide_2.jpg",
+    secondaryImage: "./images/hero_slide_2_detail.jpg",
+    colors: [
+      { name: "Midnight Indigo", code: "#1d293d" },
+      { name: "Bleached Ecru", code: "#e7e2d9" }
+    ],
+    sizes: ["XS", "S", "M", "L"],
+    description: "The headline piece of the FW26 Season Preview. A sculpted cropped denim jacket with military silver crest buttons, exposed contrast topstitching, and a sharp tailored collar.",
+    features: ["Rigid 13.5oz Cotton Denim", "Cropped silhouette with clean boxy hem", "Functional silver-toned crest buttons", "Pairable with matching utility cargos"]
+  },
+
+{
+    id: "leg-tee-03",
+    name: "Women's LEGACY Oversized Graphic Street Tee (EST. 2026)",
+    brand: "LEGACY",
+    gender: "women",
+    category: "graphic-tees",
+    subCategory: "t-shirts",
+    price: 1890,
+    originalPrice: 2490,
+    tag: "SIGNATURE PIECE",
+    isAiGenerated: true,
+    badge: "Bestseller",
+    rating: 5.0,
+    reviews: 172,
+    image: "./images/legacy_women_graphic_tee.jpg",
+    secondaryImage: "./images/legacy_women_graphic_tee_detail.jpg",
+    colors: [
+      { name: "Vintage Washed Black", code: "#1d1d1f" },
+      { name: "Charcoal Grey", code: "#3a3a3c" }
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "The headline women's streetwear essential. Tailored in an oversized relaxed boxy cut from heavyweight 260 GSM combed cotton with high-density 'LEGACY EST. 2026' arch branding across the chest.",
+    features: ["260 GSM Heavyweight Organic Cotton", "Oversized Streetwear Drop-Shoulder Fit", "Distressed Vintage Mineral Wash", "Thick Ribbed Crew Neck"]
+  },
+
+{
+    id: "leg-air-02",
+    name: "Airflex Dynamic Slim-Taper Performance Chino",
+    brand: "LEGACY",
+    gender: "men",
+    category: "airflex-pants",
+    subCategory: "trousers",
+    price: 3290,
+    originalPrice: 4290,
+    tag: "AIRFLEX SERIES",
+    badge: "Bestseller",
+    rating: 5.0,
+    reviews: 140,
+    image: "./images/legacy_airflex_pants.png",
+    secondaryImage: "./images/legacy_airflex_pants_detail.jpg",
+    colors: [
+      { name: "Olive Slate", code: "#4c5545" },
+      { name: "True Black", code: "#111111" }
+    ],
+    sizes: ["30", "32", "34", "36"],
+    description: "Water and stain-repellent finish on an ultra-flexible lightweight chino build. Elastic comfort waistband lining.",
+    features: ["Stain & water repellent coating", "4-way hyper-stretch recovery", "Tapered ankle cut", "Reinforced crotch gusset"]
+  },
+
+{
+    id: "leg-resort-03",
+    name: "Minimalist Textured Linen-Cotton Resort Shirt",
+    brand: "LEGACY",
+    gender: "men",
+    category: "resort-shirts",
+    subCategory: "shirts",
+    price: 2690,
+    originalPrice: 3390,
+    tag: "PURE LINEN",
+    badge: "Staff Pick",
+    rating: 4.9,
+    reviews: 94,
+    image: "./images/legacy_floral_resort_shirt.jpg",
+    secondaryImage: "./images/legacy_floral_resort_shirt_detail.jpg",
+    colors: [
+      { name: "Oatmeal Sand", code: "#d9cbba" },
+      { name: "Sky Mist", code: "#c4d5e2" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Slub textured natural linen blend that keeps you cool in Pakistani summers with an open neckline and fluid drape.",
+    features: ["55% French Linen, 45% Combed Cotton", "Relaxed short sleeves", "Clean back pleat", "Natural breathable weave"]
+  },
+
+{
+    id: "leg-polo-03",
+    name: "Open-Knit Pointelle Summer Resort Polo",
+    brand: "LEGACY",
+    gender: "men",
+    category: "knit-polos",
+    subCategory: "polos",
+    price: 2690,
+    originalPrice: 3490,
+    tag: "SUMMER KNIT",
+    badge: "Editorial Hero",
+    rating: 4.9,
+    reviews: 73,
+    image: "./images/legacy_cableknit_polo.jpg",
+    secondaryImage: "./images/legacy_cableknit_polo_detail.jpg",
+    colors: [
+      { name: "Alabaster Ecru", code: "#f0eee6" },
+      { name: "Olive Shadow", code: "#4c553d" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Breathable open-stitch diamond knit structure that delivers maximum airflow while retaining high-fashion drape.",
+    features: ["Open diamond knit gauge", "Reinforced collar stand", "Mother of pearl button closures", "Dry-touch cool cotton yarn"]
+  },
+
+{
+    id: "leg-gurk-03",
+    name: "Women's High-Waist Double-Buckle Gurkha Trousers",
+    brand: "LEGACY",
+    gender: "women",
+    category: "gurkha-pants",
+    subCategory: "trousers",
+    price: 3490,
+    originalPrice: 4490,
+    tag: "WOMEN'S TAILORING",
+    isAiGenerated: true,
+    badge: "New Arrival",
+    rating: 4.8,
+    reviews: 62,
+    image: "./images/legacy_women_cropped_shirt.jpg",
+    secondaryImage: "./images/legacy_pleated_wideleg_detail.jpg",
+    colors: [
+      { name: "Cream Ecru", code: "#ece8df" },
+      { name: "Espresso Brown", code: "#382d24" }
+    ],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Empowering contemporary silhouette with an ultra-flattering corseted double-buckle waistband and flowing pleated wide legs.",
+    features: ["Waist-sculpting double buckle closure", "Deep knife pleats", "Italian fluid stretch-gabardine", "Side seam pockets"]
+  },
+
+{
+    id: "leg-wide-03",
+    name: "Women's High-Waist Tailored Pleated Wide-Leg Trousers",
+    brand: "LEGACY",
+    gender: "women",
+    category: "wideleg-pants",
+    subCategory: "trousers",
+    price: 3490,
+    originalPrice: 4490,
+    tag: "ATELIER TAILORING",
+    isAiGenerated: true,
+    badge: "Trending",
+    rating: 4.9,
+    reviews: 87,
+    image: "./images/legacy_women_cropped_shirt.jpg",
+    secondaryImage: "./images/legacy_pleated_wideleg_detail.jpg",
+    colors: [
+      { name: "Sand Taupe", code: "#d5c5b2" },
+      { name: "Pitch Black", code: "#181818" }
+    ],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Elegance redefined for women's contemporary tailoring. High-rise sculpted waistband with sharp front double pleats and a fluid wide-leg puddle hem.",
+    features: ["High-rise waist sculpting with inner canvas lining", "Double front forward pleats", "Fluid drape Italian gabardine", "Side slant pockets"]
+  },
+
+{
+    id: "leg-denim-03",
+    name: "Women's Vintage Wide-Leg Puddle Denim Trousers",
+    brand: "LEGACY",
+    gender: "women",
+    category: "denim",
+    subCategory: "jeans",
+    price: 3690,
+    originalPrice: 4690,
+    tag: "LEGACY DENIM",
+    badge: "Bestseller",
+    rating: 4.9,
+    reviews: 164,
+    image: "./images/hero_slide_2.jpg",
+    secondaryImage: "./images/legacy_denim_trousers_detail.jpg",
+    colors: [
+      { name: "Light Vintage Tint", code: "#8fa9c4" },
+      { name: "Medium Acid Wash", code: "#5d7897" }
+    ],
+    sizes: ["24", "26", "28", "30", "32"],
+    description: "The ultimate IT-girl denim. Sits comfortably mid-waist and flows down into a dramatic puddle hem over platform sneakers or boots.",
+    features: ["100% Non-stretch Sustainable Cotton", "Ultra-wide leg puddle length", "Distressed hem detail", "Signature copper rivets"]
+  },
+
+{
+    id: "leg-denim-04",
+    name: "Juniors Relaxed Baggy Skate Denim Trousers",
+    brand: "LEGACY",
+    gender: "juniors",
+    category: "denim",
+    subCategory: "jeans",
+    price: 2490,
+    originalPrice: 3290,
+    tag: "JUNIORS DENIM",
+    badge: "Bestseller",
+    rating: 4.9,
+    reviews: 104,
+    image: "./images/juniors_skate_denim.jpg",
+    secondaryImage: "./images/juniors_skate_denim_detail.jpg",
+    colors: [
+      { name: "Vintage Mid Blue", code: "#3a577d" },
+      { name: "Faded Black", code: "#2e2e2e" }
+    ],
+    sizes: ["8-9Y", "10-11Y", "12-13Y", "14-15Y"],
+    description: "Authentic 90s baggy fit for junior streetwear enthusiasts. Adjustable internal waistband elastic ensures the perfect fit as they grow.",
+    features: ["100% durable cotton denim", "Internal adjustable buttonhole elastic", "Wide skater leg opening", "Bar-tacked stress points"]
+  },
+
+{
+    id: "leg-shkt-02",
+    name: "Women's Boxy Cropped Poplin Button-Down Shirt",
+    brand: "LEGACY",
+    gender: "women",
+    category: "shirts",
+    subCategory: "shirts",
+    price: 2390,
+    originalPrice: 2990,
+    tag: "MINIMALIST LUXE",
+    isAiGenerated: true,
+    badge: "Trending",
+    rating: 4.9,
+    reviews: 119,
+    image: "./images/legacy_women_cropped_shirt.jpg",
+    secondaryImage: "./images/legacy_women_cropped_shirt_detail.jpg",
+    colors: [
+      { name: "Crisp Oxford White", code: "#ffffff" },
+      { name: "Sky Blue Fine Stripe", code: "#b8d5e8" }
+    ],
+    sizes: ["XS", "S", "M", "L"],
+    description: "A tailored menswear staple cropped precisely at the natural waistline. Cut from 100% Egyptian cotton poplin with exaggerated French cuffs and a sharp structured collar.",
+    features: ["100% Crisp Egyptian Cotton Poplin", "Clean architectural cropped boxy hem", "Exaggerated French cuffs with double buttons", "Seamless front placket"]
+  },
+
+{
+    id: "leg-shkt-03",
+    name: "Juniors 'LEGACY 2026' Varsity Bomber Jacket",
+    brand: "LEGACY",
+    gender: "juniors",
+    category: "shirts",
+    subCategory: "shirts",
+    price: 3290,
+    originalPrice: 4290,
+    tag: "JUNIORS SIGNATURE",
+    badge: "Hero Piece",
+    rating: 5.0,
+    reviews: 95,
+    image: "./images/juniors_varsity_jacket.jpg",
+    secondaryImage: "./images/juniors_varsity_jacket_detail.jpg",
+    colors: [
+      { name: "Varsity Navy & Cream", code: "#1f2f4d" },
+      { name: "Forest Green & White", code: "#294334" }
+    ],
+    sizes: ["8-9Y", "10-11Y", "12-13Y", "14-15Y"],
+    description: "Collegiate heritage reimagined for the youth. Features custom chenille 'L' embroidery on the chest, supple vegan leather sleeves, and striped ribbed collar.",
+    features: ["Heavy wool-blend body", "Supple vegan leather sleeves", "Chenille 'L26' chest patch", "Snap button front closure"]
+  },
+
+{
+    id: "leg-tee-04",
+    name: "Juniors Boxy Heavyweight Skate Graphic Tee",
+    brand: "LEGACY",
+    gender: "juniors",
+    category: "graphic-tees",
+    subCategory: "t-shirts",
+    price: 1290,
+    originalPrice: 1790,
+    tag: "JUNIORS STREETWEAR",
+    badge: "Trending",
+    rating: 4.9,
+    reviews: 84,
+    image: "./images/juniors_skate_tee.jpg",
+    secondaryImage: "./images/juniors_skate_tee_detail.jpg",
+    colors: [
+      { name: "Washed Black", code: "#222222" },
+      { name: "Cobalt Blue", code: "#295094" }
+    ],
+    sizes: ["8-9Y", "10-11Y", "12-13Y", "14-15Y"],
+    description: "Bold skate-inspired puff-print 'LEGACY CREW' graphic. Cut loose and boxy from durable 240 GSM organic cotton.",
+    features: ["240 GSM organic cotton", "3D Puff print detailing", "Durable reinforced neckband", "Relaxed dropped shoulders"]
+  },
+
+{
+    id: "leg-shrt-01",
+    name: "Tactical Bungee Nylon Cargo Shorts",
+    brand: "LEGACY",
+    gender: "men",
+    category: "shorts",
+    subCategory: "shorts",
+    price: 1890,
+    originalPrice: 2490,
+    tag: "STREETWEAR",
+    badge: "Best Value",
+    rating: 4.8,
+    reviews: 89,
+    image: "./images/juniors_cargo_shorts.jpg",
+    secondaryImage: "./images/juniors_cargo_shorts_detail.jpg",
+    colors: [
+      { name: "Pitch Black", code: "#181818" },
+      { name: "Cement Grey", code: "#8c8e8c" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Weather-resistant ripstop nylon utility shorts featuring 3D gusseted cargo pockets with magnetic closures and integrated webbing belt.",
+    features: ["Water-repellent ripstop nylon", "Magnetic pocket flaps", "Elastic waistband with quick-release belt", "Above-knee boxy fit"]
+  },
+
+{
+    id: "leg-shrt-02",
+    name: "Women's Pleated Utility Micro Cargo Skort",
+    brand: "LEGACY",
+    gender: "women",
+    category: "shorts",
+    subCategory: "shorts",
+    price: 2190,
+    originalPrice: 2890,
+    tag: "TRENDING",
+    badge: "Trending",
+    rating: 4.7,
+    reviews: 74,
+    image: "./images/legacy_women_cargo_pants.jpg",
+    secondaryImage: "./images/legacy_women_cargo_pants_detail.jpg",
+    colors: [
+      { name: "Combat Khaki", code: "#78765b" },
+      { name: "Pitch Black", code: "#1c1c1c" }
+    ],
+    sizes: ["XS", "S", "M", "L"],
+    description: "Sharp knife pleats merged with tactical side cargo pockets. Features built-in stretch inner shorts for active confidence all day.",
+    features: ["Integrated modesty inner shorts", "Accordion cargo pockets with d-ring", "Heavy cotton twill build", "Side zip closure"]
+  },
+
+{
+    id: "leg-shrt-03",
+    name: "Juniors Utility Multi-Pocket Cargo Shorts",
+    brand: "LEGACY",
+    gender: "juniors",
+    category: "shorts",
+    subCategory: "shorts",
+    price: 1590,
+    originalPrice: 2190,
+    tag: "STREET CULTURE",
+    badge: "Hot Drop",
+    rating: 4.8,
+    reviews: 64,
+    image: "./images/juniors_cargo_shorts.jpg",
+    secondaryImage: "./images/juniors_cargo_shorts_detail.jpg",
+    colors: [
+      { name: "Camo Green", code: "#4c5943" },
+      { name: "Stone", code: "#c9c2b1" }
+    ],
+    sizes: ["8-9Y", "10-11Y", "12-13Y", "14-15Y"],
+    description: "Built for adventure. Multiple bellowed cargo pockets with velcro flaps and a comfortable elastic drawstring waistband.",
+    features: ["Rugged cotton ripstop", "Drawstring elastic waist", "6 functional storage pockets", "Knee-length streetwear cut"]
+  },
+
+{
+    id: "leg-act-01",
+    name: "Juniors Overdyed Heavy French Terry Hoodie",
+    brand: "LEGACY",
+    gender: "juniors",
+    category: "activewear",
+    subCategory: "t-shirts",
+    price: 2490,
+    originalPrice: 3290,
+    tag: "STREETWEAR",
+    badge: "Top Pick",
+    rating: 4.9,
+    reviews: 112,
+    image: "./images/juniors_street_hoodie.jpg",
+    secondaryImage: "./images/juniors_street_hoodie_detail.jpg",
+    colors: [
+      { name: "Pigment Washed Charcoal", code: "#303030" },
+      { name: "Vintage Pine", code: "#293a2c" }
+    ],
+    sizes: ["8-9Y", "10-11Y", "12-13Y", "14-15Y"],
+    description: "400 GSM custom French terry fleece with no scratchy drawstrings. Clean double-layered hood with subtle tonal 'LEGACY' embroidery on the cuff.",
+    features: ["400 GSM 100% French Terry Cotton", "Kangaroo hand-warmer pocket", "Double-layered crossover hood", "Pre-shrunk vintage dye"]
+  },
+
+{
+    id: "leg-act-02",
+    name: "Juniors Bungee Parachute Cargo Pants // BLACK",
+    brand: "LEGACY",
+    gender: "juniors",
+    category: "wideleg-pants",
+    subCategory: "trousers",
+    price: 2390,
+    originalPrice: 3190,
+    tag: "STREETWEAR VIRAL",
+    badge: "Trending",
+    rating: 4.9,
+    reviews: 86,
+    image: "./images/juniors_parachute_pants.jpg",
+    secondaryImage: "./images/juniors_parachute_pants_detail.jpg",
+    colors: [
+      { name: "Obsidian Black", code: "#141414" },
+      { name: "Tactical Charcoal", code: "#2e2e2e" }
+    ],
+    sizes: ["8-9Y", "10-11Y", "12-13Y", "14-15Y"],
+    description: "Trending baggy parachute cargo pants for juniors with adjustable ankle toggle bungees, elastic waist, and 3D utility cargo pockets.",
+    features: ["Featherlight crinkle tech ripstop", "Adjustable bungee toggle ankles", "Dual accordion cargo pockets", "Elastic waistband with safety drawstring"]
+  },
+
+{
+    id: "leg-resort-02",
+    name: "LEGACY Summer Resort Camp Collar Shirt (Outdoor Edition)",
+    brand: "LEGACY",
+    gender: "men",
+    category: "resort-shirts",
+    subCategory: "shirts",
+    price: 2490,
+    originalPrice: 3190,
+    tag: "SUMMER STAPLE",
+    badge: "Trending",
+    rating: 4.8,
+    reviews: 79,
+    image: "./images/legacy_floral_resort_outdoor.jpg",
+    secondaryImage: "./images/legacy_floral_resort_shirt_detail.jpg",
+    colors: [
+      { name: "Crisp Chalk White", code: "#fafafa" },
+      { name: "Ink Black Floral", code: "#181818" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Official outdoor lookbook series. Breathable Italian linen-cotton poplin with hand-painted botanical watercolor florals and relaxed summer sleeves.",
+    features: ["100% Breathable Poplin Cotton", "Camp spread collar", "Side seam slits", "Mother of pearl finish buttons"]
+  },
+
+{
+    id: "leg-moto-02",
+    name: "LEGACY Grand Prix Racing Lookbook Shirt (Turf Edition)",
+    brand: "LEGACY",
+    gender: "men",
+    category: "motorsport",
+    subCategory: "shirts",
+    price: 2690,
+    originalPrice: 3490,
+    tag: "RACING SERIES",
+    badge: "New Arrival",
+    rating: 4.9,
+    reviews: 86,
+    image: "./images/legacy_motorsport_turf.jpg",
+    secondaryImage: "./images/legacy_motorsport_jersey_detail.jpg",
+    colors: [
+      { name: "Asphalt Black", code: "#181818" },
+      { name: "Speedway White", code: "#ffffff" }
+    ],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Official lookbook campaign edition. Ventilated technical aero-mesh button-up with bold VIKINGS racing crest and drop-shoulder streetwear cut.",
+    features: ["Aero-mesh moisture control", "Sublimated non-fade racing graphics", "Relaxed camp collar silhouette", "Pre-shrunk wash"]
+  }
+];
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { PRODUCTS_DATA };
+}
